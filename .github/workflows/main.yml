@@ -31,3 +31,4 @@ jobs:
       run: |
         pushd cicd/application
         popd
+    
