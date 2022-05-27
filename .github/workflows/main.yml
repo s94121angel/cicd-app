@@ -1,19 +1,20 @@
-name: angel_test_CI
+name: angel_test_CI2
 
-on: 
+on:
   push:
     branches:
-      -'*'
+      - '*'
   pull_request:
     branches:
-      -'*'
+      - '*'
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Install required packages
       run: sudo apt-get install -f yamllint shellcheck
 
@@ -30,5 +31,6 @@ jobs:
     - name: Run yaml check
       run: |
         pushd cicd/application
+        make yaml-lint
         popd
-    
+
