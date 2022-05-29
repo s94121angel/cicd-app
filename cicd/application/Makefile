@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .PHONY: build-image push-image helm kustomize native
 
 SERVER  =
@@ -6,6 +7,15 @@ COMMIT  =${shell git rev-parse --short HEAD}
 LOG     ="${shell git log -1 --pretty=%B}"
 VERSION ?=${COMMIT}
 TYPE    ?=KIND
+=======
+PHONY: build-image push-image
+
+SERVER  =
+REPO    ?=hwchiu/cicd-app
+COMMIT  =${shell git rev-parse --short HEAD}
+LOG     ="${shell git log -1 --pretty=%B}"
+VERSION ?=${COMMIT}
+>>>>>>> The prototype of application
 
 build-image:
 	docker build --build-arg HASH=${COMMIT} --build-arg LOG=${LOG} --tag ${SERVER}${REPO}:${VERSION} .
@@ -14,6 +24,7 @@ build-image:
 push-image: build-image
 	docker image push ${SERVER}${REPO}:${VERSION}
 	docker image push ${SERVER}${REPO}:latest
+<<<<<<< HEAD
 
 yaml-lint:
 	@echo "---------yamllint----------"
@@ -56,3 +67,5 @@ bats:
 	sudo TYPE=${TYPE} bats -t tests/test.bats
 
 k8s-test: k8s-yaml  bats
+=======
+>>>>>>> The prototype of application

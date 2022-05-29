@@ -11,8 +11,15 @@ Latest Commit Hash is ${PREFIX}_${COMMITHASH}
 Latest Commit Log is ${PREFIX}_${COMMITLOG}
 IP address list are ${PREFIX}_${IPS}
 Datetime is $(date)
+<<<<<<< HEAD
 Angel is testing docker from localhost to control VM.
 EOF
 
 #Generate a new index.html under /var/www/html
 exec "$(command -v nginx)" -c /etc/nginx/nginx.conf -g "daemon off;"
+=======
+EOF
+
+#Generate a new index.html under /var/www/html
+exec $(which nginx) -c /etc/nginx/nginx.conf -g "daemon off;"
+>>>>>>> The prototype of application
