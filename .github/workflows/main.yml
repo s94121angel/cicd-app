@@ -3,7 +3,7 @@ name: ANGEL_TESTING
 on:
   push:
     branches:
-      - master
+      - '*'
   pull_request:
     branches:
       - '*'
