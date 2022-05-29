@@ -18,23 +18,17 @@ jobs:
     - name: Install required packages
       run: sudo apt-get install -f yamllint shellcheck
 
-    - name: RUN SHELL CHECK
-      run: |
-        pushd cicd/application
-        make shellcheck
-        popd
-
     - name: Run shell check
       run: |
         pushd cicd/application
         make shellcheck
         popd
-    - name: Run shell check
+    - name: Run docker check
       run: |
         pushd cicd/application
         make docker-lint
         popd
-    - name: Run shell check
+    - name: Run yaml check
       run: |
         pushd cicd/application
         make yaml-lint
