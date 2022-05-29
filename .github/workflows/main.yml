@@ -20,9 +20,9 @@ jobs:
 
     - name: RUN SHELL CHECK
       run: |
-              pushd cicd/application
-              make shellcheck
-              popd
+        pushd cicd/application
+        make shellcheck
+        popd
 
     - name: Run shell check
       run: |
