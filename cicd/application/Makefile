@@ -2,7 +2,7 @@
 .PHONY: build-image push-image helm kustomize native
 
 SERVER  =
-REPO    ?=s94121angel/cicd-app
+REPO    ?=hwchiu/cicd-app
 COMMIT  =${shell git rev-parse --short HEAD}
 LOG     ="${shell git log -1 --pretty=%B}"
 VERSION ?=${COMMIT}
