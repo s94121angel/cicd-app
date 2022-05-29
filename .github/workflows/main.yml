@@ -1,4 +1,4 @@
-name: ANGEL_TEST
+name: citesting
 
 on:
   push:
