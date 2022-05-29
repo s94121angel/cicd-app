@@ -20,9 +20,9 @@ jobs:
 
     - name: Run shell check
       run: |
-              pushd cicd/application
-              make shellcheck
-              popd
+	pushd cicd/application
+	make shellcheck
+	popd
 
     - name: Run docker-lint
       run: |
