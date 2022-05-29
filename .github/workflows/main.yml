@@ -20,7 +20,7 @@ jobs:
 
     - name: RUN SHELL CHECK
       run: |
-              pushed cicd/application
+              pushd cicd/application
               make shellcheck
               popd
 
