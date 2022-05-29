@@ -23,12 +23,12 @@ jobs:
         pushd cicd/application
         make shellcheck
         popd
-    - name: Run shell check
+    - name: Run docker-lint
       run: |
         pushd cicd/application
         make docker-lint
         popd
-    - name: Run shell check
+    - name: Run yaml-lint
       run: |
         pushd cicd/application
         make yaml-lint
